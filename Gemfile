@@ -30,6 +30,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'sendgrid-ruby'
 gem 'figaro'
 gem 'kaminari', :git => 'https://github.com/kaminari/kaminari'
+gem 'ransack', github: 'activerecord-hackery/ransack'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

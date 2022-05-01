@@ -1,4 +1,13 @@
 GIT
+  remote: https://github.com/activerecord-hackery/ransack.git
+  revision: 4caf7c25b07e6c7271b02e46dc3a7985cca61162
+  specs:
+    ransack (2.4.2)
+      activerecord (>= 5.2.4)
+      activesupport (>= 5.2.4)
+      i18n
+
+GIT
   remote: https://github.com/kaminari/kaminari
   revision: ae24575fb18db249d37f0c50472395fc3d3eb042
   specs:
@@ -243,6 +252,7 @@ DEPENDENCIES
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)
   rails (~> 5.2.7, >= 5.2.7.1)
+  ransack!
   sass-rails (~> 5.0)
   selenium-webdriver
   sendgrid-ruby
