@@ -5,5 +5,6 @@ class HomeController < ApplicationController
 
   def contact
     @message = Message.new
+    @list_message = Message.page(params[:page]).per(6)
   end
 end

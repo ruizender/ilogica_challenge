@@ -12,6 +12,18 @@ class MessagesController < ApplicationController
     end
   end
 
+  def destroy
+    @message = Message.find(params[:id])
+    respond_to do |format|
+      if @message.destroy
+        format.html { redirect_to contact_path, notice: "Message was successfully destroyed." }
+      else
+        format.html { render 'home/contact' }
+      end
+    end
+  end
+  
+
   private
 
   def message_params
