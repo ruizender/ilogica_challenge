@@ -1,4 +1,12 @@
+    
 <table class="table container bg-white">
+<%= search_form_for @q, url: contact_path do |f|%>
+    <div  class="form-inline my-2 my-lg-0"%>
+        <%= f.search_field :email_or_description_cont, placeholder: 'Search Message', class:"form-control mr-sm-2" %>
+        <%= f.submit "Search", class:"form-control btn-outline-success mx-2 my-2" %> 
+    </div>
+<% end %>
+
   <thead>
     <tr>
       <th scope="col">Date</th>
@@ -6,6 +14,7 @@
       <th scope="col">Email</th>
       <th scope="col">Phone</th>
       <th scope="col">Description</th>
+      <th scope="col"></th>
       <th scope="col"></th>
 
     </tr>
@@ -18,14 +27,18 @@
       <td><%= message.email%></td>
       <td><%= message.phone%></td>
       <td><%= message.description%></td>
+      <td><%= link_to "#", "data-toggle": "modal", "data-target": "#ShowModal" do %>
+        <span class="btn btn-primary">SHOW</span>
+      <% end  %>
+      </td>
       <td><%= link_to message_path(message.id), method: :delete, data: { confirm: 'Are you sure?' } do %>
-          <span class="btn btn-danger">DELETE</span>
-          <%# <i class="fas fa-trash-alt fa-2x"></i> %>
-          <% end  %>
+        <span class="btn btn-danger">DELETE</span>
+        <% end  %>
       </td>
     </tr>
-  </tbody
-  <% end %>>
+  </tbody>
+      <%= render 'home/modals/show_message' , :message => message %>
+  <% end %>
 </table>
 
 
