@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-light navbar-floating">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="/assets/favicon.png" alt="" width="40">
+    
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarToggler">
+      <ul class="navbar-nav ml-lg-5 mt-3 mt-lg-0">
+
+        <li class="nav-item">
+          <%= link_to 'Home', index_path, class:"nav-link" %>
+        </li>
+
+        <li class="nav-item">
+        <%= link_to 'Contact', contact_path, class:"nav-link" %>
+        </li>
+        <% if current_user %>
+          <li class="nav-item">
+            <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class:"nav-link" %>
+          </li>
+        <% else %>
+          <li class="nav-item">
+          <%= link_to "#", "data-toggle": "modal", "data-target": "#SignUpModal" do %>
+            <span class="nav-link">Sign up</span>
+            <% end %>
+          </li>
+          <li class="nav-item">
+          <%= link_to "#", "data-toggle": "modal", "data-target": "#SignInModal" do %>
+            <span class="nav-link">Sign in</span>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>
