@@ -1,49 +1,43 @@
-    
-<table class="table container bg-white">
-<%= search_form_for @q, url: contact_path do |f|%>
+<div class="container"> 
+  <%= search_form_for @q, url: contact_path do |f|%>
     <div  class="form-inline my-2 my-lg-0"%>
-        <%= f.search_field :email_or_description_cont, placeholder: 'Search Message', class:"form-control mr-sm-2" %>
-        <%= f.submit "Search", class:"form-control btn-outline-success mx-2 my-2" %> 
+      <%= f.search_field :email_or_description_cont, placeholder: 'Search Message', class:"form-control mr-sm-2" %>
+      <%= f.submit "Search", class:"form-control btn-outline-success mx-2 my-2" %> 
     </div>
-<% end %>
-
-  <thead>
-    <tr>
-      <th scope="col">Date</th>
-      <th scope="col">Name</th>
-      <th scope="col">Email</th>
-      <th scope="col">Phone</th>
-      <th scope="col">Description</th>
-      <th scope="col"></th>
-      <th scope="col"></th>
-
-    </tr>
-  </thead>
-  <tbody>
-  <% @list_message.each  do |message|  %>
-    <tr>
-      <td><%= message.created_at.strftime("%d-%m-%Y") %></td>
-      <td><%= message.full_name%></td>
-      <td><%= message.email%></td>
-      <td><%= message.phone%></td>
-      <td><%= message.description%></td>
-      <td><%= link_to "#", "data-toggle": "modal", "data-target": "#ShowModal" do %>
-        <span class="btn btn-primary">SHOW</span>
-      <% end  %>
-      </td>
-      <td><%= link_to message_path(message.id), method: :delete, data: { confirm: 'Are you sure?' } do %>
-        <span class="btn btn-danger">DELETE</span>
-        <% end  %>
-      </td>
-    </tr>
-  </tbody>
-      <%= render 'home/modals/show_message' , :message => message %>
   <% end %>
-</table>
 
-
-  <div class="row text-center">
-  <div class="col-md-8 offset-md-2">
-    <%= paginate @list_message %>
-    </div>
-  </div>
+  <table class="table container bg-white">
+    <thead>
+      <tr>
+        <th scope="col">Date</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Description</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @list_message.each  do |message|  %>
+      <tr>
+        <td><%= message.created_at.strftime("%d-%m-%Y") %></td>
+        <td><%= message.full_name%></td>
+        <td><%= message.email%></td>
+        <td><%= message.phone%></td>
+        <td><%= message.description%></td>
+        <td><%= link_to "#", "data-toggle": "modal", "data-target": "#ShowModal" do %>
+          <span class="btn btn-primary">SHOW</span>
+        <% end  %>
+        </td>
+        <td><%= link_to message_path(message.id), method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <span class="btn btn-danger">DELETE</span>
+        <% end  %>
+        </td>
+      </tr>
+    </tbody>
+        <%= render 'home/modals/show_message' , :message => message %>
+    <% end %>
+  </table>
+      <%= paginate @list_message %>
+</div>
