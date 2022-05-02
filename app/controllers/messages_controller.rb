@@ -22,14 +22,12 @@ class MessagesController < ApplicationController
     end
   end
   
-
   private
 
   def set_messages
     @message = Message.find(params[:id])
   end
   
-
   def message_params
     params.require(:message).permit(:full_name, :email, :phone, :description)
   end
