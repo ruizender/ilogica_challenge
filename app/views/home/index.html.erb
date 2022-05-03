@@ -3,8 +3,8 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <div class="container h-100">
-    <% if current_user && current_user.admin? %>
-      <%= link_to "#", "data-toggle": "modal", "data-target": "#CarouselModal" do %>
+    <% if current_user %>
+      <%= link_to "#", "data-toggle": "modal", "data-target": "#CardModal" do %>
         <button class="nav-link btn btn-outline-primary">See Articles</button>
       <% end %>
     <% end  %>
