@@ -58,20 +58,3 @@ La tabla tendrá paginación por cada 6 mensajes que reciba según orden por fec
 **Adicionales:**
 
 Se aplicaron algunas mejoras a las vistas, para hacer mas interactiva sus funcionalidades. Por ejemplo, el logo de la empresa, al darle click llevara a la pagina principal. En la vista contact en la sección de contacto al darle click a email y location redirigirá a esa sección de la vista de manera suave y agradable gracias a funcionales de Javascript. 
-
-**Credenciales de acceso:**
-
-**Por defecto, el correo electrónico al que llegarán las consultas será: camilo@ilogica.cl**
-
-Teniendo en cuenta que dicho repositorio es privado y, exclusivamente para esta prueba, definí tres usuarios:
-
-**Usuario Administradores**
-User: camilo@ilogica.cl
-Password: 123456
-User: jaime@ilogica.cl
-Password: 123456
-
-**Usuario no admin:**
-
-User: example@gmail.com
-Password: 123456
