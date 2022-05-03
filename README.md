@@ -1,7 +1,10 @@
-# README
+#Challenge Ilogica 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Sitio para que administrar tus finanzas
+
+Instalación 
+
+Necesit
 
 Things you may want to cover:
 
