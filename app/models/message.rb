@@ -5,7 +5,7 @@ class Message < ApplicationRecord
 
   def message_client   
     from = SendGrid::Email.new(email: 'ruiz.valera@gmail.com')
-    to = SendGrid::Email.new(email: 'ruiz.valera@gmail.com')
+    to = SendGrid::Email.new(email: ENV['EMAIL'])
     subject = "Customer Message #{self.full_name}"
     content = SendGrid::Content.new(type: 'text/plain', value: "#{self.description}. Contacto telefonico #{self.phone}. Responder correo a #{self.email}")
     mail = SendGrid::Mail.new(from, subject, to, content)
