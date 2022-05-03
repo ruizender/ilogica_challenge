@@ -2,13 +2,13 @@
 
 Desafío asignado por Ilógica para medir capacidades creativas y resolutivas de una app web de un postulante. 
 
-Aplicación fue subida a los servidores de Heroku, al cual podrán acceder en el siguiente link:  [(https://ilogicachallenge.herokuapp.com/)] 
+Aplicación fue subida a los servidores de Heroku, al cual podrán acceder en el siguiente link:  (https://ilogicachallenge.herokuapp.com/)
 
 ## Primeros pasos:
 
 Pre-requisitos
 
--	Hacer `git clone` al proyecto, en el siguiente enlace [(https://github.com/ruizender/ilogica_challenge.git)] 
+-	Hacer `git clone` al proyecto, en el siguiente enlace (https://github.com/ruizender/ilogica_challenge.git)
 
 -	Se deberá instalar en tu equipo las siguientes versiones de Ruby on Rails:
 `Ruby 2.6.3`
@@ -18,7 +18,7 @@ Pre-requisitos
 
 - En la terminal crear las bases de datos, con el comando:   `rails db: create` y Posteriormente correr las migraciones pendientes con `rails db:migrate`
 
-- En la terminal, se ejecuta el comando `rails server`. Y se podrá acceder al proyecto, en el explorador por medio de la siguiente  URL:   [(http://localhost:3000/)] 
+- En la terminal, se ejecuta el comando `rails server`. Y se podrá acceder al proyecto, en el explorador por medio de la siguiente  URL:   (http://localhost:3000/)
 
 
 ## Descripción y Funcionalidades de la aplicación:
@@ -61,17 +61,17 @@ Se aplicaron algunas mejoras a las vistas, para hacer mas interactiva sus funcio
 
 ## Credenciales de acceso:
 
-### Por defecto, el correo electrónico al que llegarán las consultas será: camilo@ilogica.cl
+###### Por defecto, el correo electrónico al que llegarán las consultas será: camilo@ilogica.cl
 
 Teniendo en cuenta que dicho repositorio es privado y, exclusivamente para esta prueba, definí tres usuarios:
 
-### Usuario Administradores
+###### Usuario Administradores
 User: camilo@ilogica.cl
 Password: 123456
 User: jaime@ilogica.cl
 Password: 123456
 
-### Usuario no admin:
+###### Usuario no admin:
 
 User: example@gmail.com
 Password: 123456
